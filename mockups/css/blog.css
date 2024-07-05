@@ -1,0 +1,197 @@
+body, html {
+    margin: 0;
+    font-family: 'Coolvetica', sans-serif;
+    overflow: hidden;
+    background-image: url(mockups/assets/bandbpage/bg_desktop.png);
+    background-size: cover; 
+    background-repeat: repeat-y; 
+    background-position: center center;
+    background-color: rgb(40, 129, 202);
+}
+
+@font-face {
+    font-family: "Coolvetica V2";
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot");
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.svg#Coolvetica V2")format("svg");
+}
+
+.header {
+    position: relative;
+    background-color: #9F2B68;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.header-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Coolvetica';
+    margin-left: 90%;
+    margin-top: 2%;
+    font-size: small;
+    flex-grow: 1;
+    z-index: 0; 
+}
+
+.logo1, .logo2, .logo3, .logo4 {
+    position: absolute; /* Position the images absolutely */
+    top: 50%; /* Vertically center the images */
+    transform: translateY(-50%); /* Adjust for centering */
+    height: 80px; /* Ensure the height fits within the header */
+    width: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure the images are above the text */
+}
+
+.logo1 {
+    left: 20px; 
+    margin-top: 4%;
+    height: 210%;
+    width: auto;
+}
+
+.logo2 {
+    right: 20px; 
+    margin-right: 8%;
+}
+
+.logo3 {
+    margin-left: 90%;
+}
+
+.logo4{
+    margin-left: 20%;
+}
+
+.logo5{
+    width: 180px;
+    height: auto;
+    margin-top: 61%;
+    margin-left: 85%;
+}
+
+.trapezoid {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 300px;
+    height: 0;
+    border-top: 480px solid coral; 
+    border-right: 160px solid transparent; 
+}
+
+.sections{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Coolvetica';
+    margin-left: 70%;
+    margin-top: 40%;
+    font-size: large;
+    flex-grow: 1;
+    z-index: 0; 
+}
+
+.side-text-small {
+    position: absolute;
+    font-size: 40px;
+    top: 47%;
+    left: 0;
+    transform: translateY(-50%);
+    color: white;
+    padding: 0 20px;
+    font-family: 'Coolvetica V2'; 
+    line-height: 1;
+}
+
+.side-text-large {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    font-size: 45px;
+    transform: translateY(-50%);
+    color: white;
+    padding: 0 20px;
+    font-family: 'Coolvetica V2'; 
+    line-height: 0.9;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid white;
+    width: 210%;
+    margin: 20px 0;
+    margin-top: 0px;
+}
+
+.scrollable-section {
+    height: 500px;
+    width: 600px; 
+    margin-left: 35%;
+    padding: 10px;
+    overflow-y: scroll;
+    background-color: #f1f1f100; 
+    border-radius: 10px; 
+}
+
+.scrollable-content {
+    height: 800px;
+    border-radius: 10px; 
+    padding: 20px;
+}
+
+.scrollable-content div {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.scrollable-section::-webkit-scrollbar {
+    width: 15px; 
+}
+
+.scrollable-section::-webkit-scrollbar-track {
+    background: transparent;
+    width: 2px;
+    border-radius: 1px;
+    position: relative;
+}
+
+.scrollable-section::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 7px;
+    border: 2px solid transparent; 
+    background-clip: padding-box; 
+    height: 10px;
+    min-height: 10px;
+    max-height: 10px;
+}
+
+.scrollable-section::-webkit-scrollbar-track-piece::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px; 
+    background: white; 
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.scrollable-section::-webkit-scrollbar-thumb:hover {
+    background: #ccc; 
+}
+
