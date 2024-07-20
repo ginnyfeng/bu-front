@@ -6,7 +6,7 @@ body, html {
     background-size: cover; 
     background-repeat: repeat-y; 
     background-position: center center;
-    background-color: rgb(40, 129, 202);
+    background-color: #008DD2;
 }
 
 @font-face {
@@ -21,7 +21,7 @@ body, html {
 
 .header {
     position: relative;
-    background-color: #9F2B68;
+    background-color: #EA0F81;
     height: 120px;
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ body, html {
     z-index: 0; 
 }
 
-.logo1, .logo2, .logo3, .logo4 {
+.logo1, .logo2, .logo3, .logo4, .logo5{
     position: absolute; /* Position the images absolutely */
     top: 50%; /* Vertically center the images */
     transform: translateY(-50%); /* Adjust for centering */
@@ -54,7 +54,8 @@ body, html {
 }
 
 .logo1 {
-    left: 20px; 
+    left: 50px; 
+    top: 60px;
     margin-top: 4%;
     height: 210%;
     width: auto;
@@ -70,23 +71,23 @@ body, html {
 }
 
 .logo4{
+    left: 60px;
     margin-left: 20%;
 }
 
 .logo5{
-    width: 180px;
-    height: auto;
-    margin-top: 61%;
-    margin-left: 85%;
+    transform: scaleX(-1);
+    margin-left:84%;
+    margin-top: 25%;
 }
 
 .trapezoid {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 0px;
-    width: 300px;
-    height: 0;
-    border-top: 480px solid coral; 
+    width: 310px;
+    height: 0px;
+    border-top: 583px solid #68B436; 
     border-right: 160px solid transparent; 
 }
 
@@ -104,9 +105,9 @@ body, html {
 
 .side-text-small {
     position: absolute;
-    font-size: 40px;
-    top: 47%;
-    left: 0;
+    font-size: 30px;
+    top: 45%;
+    left: 1%;
     transform: translateY(-50%);
     color: white;
     padding: 0 20px;
@@ -116,8 +117,8 @@ body, html {
 
 .side-text-large {
     position: absolute;
-    top: 70%;
-    left: 0;
+    top: 65%;
+    left: 1%;
     font-size: 45px;
     transform: translateY(-50%);
     color: white;
