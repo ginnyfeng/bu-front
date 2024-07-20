@@ -1,7 +1,7 @@
 import s from "./styles.module.css";
 
 const Resources = () => {
-  return <div>Resources</div>;
+  return <Layout className={s.container}>Resources</Layout>;
 };
 
 export default Resources;
