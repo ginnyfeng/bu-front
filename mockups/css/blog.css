@@ -22,7 +22,7 @@ body, html {
 .header {
     position: relative;
     background-color: #EA0F81;
-    height: 23vh; /* Increase header height */
+    height: 20vh; /* Increase header height */
     width: 100vw; /* Widen the header */
     display: flex;
     align-items: center;
@@ -45,6 +45,7 @@ body, html {
     z-index: 0;
 }
 
+
 .logo1, .logo2, .logo3, .logo4, .logo5 {
     position: absolute;
     transform: translateY(-50%);
@@ -53,48 +54,49 @@ body, html {
 
 .logo1 {
     margin-left: 5vw; /* Position at the top left corner */
-    margin-top: 5vh; /* Adjust top position */
-    width: 25%;
+    margin-top: 45vh; /* Adjust top position */
+    width: 20%;
     height: auto;
 }
 
 .logo2 {
-    margin-right: 5%;
-    height: 6vh; /* Larger logos */
+    margin-left: 75vw;
+    margin-top: 8vh;
+    height: 12vh; /* Larger logos */
     width: auto;
 }
 
 .logo3 {
-    left: 90vw;
-    top: 50%;
-    height: 10vh; /* Larger logos */
+    left: 85vw;
+    top: 9vh;
+    height: 17vh; /* Larger logos */
     width: auto;
 }
 
 .logo4 {
-    left: 20vw;
+    left: 30vw;
     top: 50%;
-    height: 10vh; /* Larger logos */
+    height: 12vh; /* Larger logos */
     width: auto;
 }
 
 .logo5 {
     transform: scaleX(-1);
     position: absolute;
-    margin-top: 70%;
-    margin-left: 70%;
-    height: 8vh; /* Make logo5 smaller */
+    margin-top: 60%;
+    margin-left: 80%;
+    height: 32vh; /* Make logo5 smaller */
     width: auto;
 }
 
 .trapezoid {
     position: absolute;
     bottom: 0; /* Base at the bottom of the screen */
-    left: -10vw; /* Shift to the left */
-    width: 31vw;
+    left: 0%; /* Shift to the left */
+    width: 25vw;
     height: 0;
-    border-top: 77vh solid #EF7F1A; /* Adjust border-top to reach the header */
-    border-right: 16vw solid transparent;
+    border-top: 80vh solid #EF7F1A; /* Adjust border-top to reach the header */
+    border-right: 10vw solid transparent;
 }
 
 .sections {
@@ -111,8 +113,8 @@ body, html {
 .side-text-small {
     position: absolute;
     font-size: 2vw;
-    top: 35vh;
-    left: 1vw;
+    top: 45vh;
+    left: 2vw;
     transform: translateY(-50%);
     color: white;
     padding: 0 2vw;
@@ -123,7 +125,7 @@ body, html {
 .side-text-large {
     position: absolute;
     top: 65vh;
-    left: 1vw;
+    left: 2vw;
     font-size: 3vw;
     transform: translateY(-50%);
     color: white;
@@ -142,8 +144,9 @@ hr {
 
 .scrollable-section {
     height: 50vh;
-    width: 45vw; /* Slightly wider */
-    margin-left: 45vw; /* Slightly to the left */
+    width: 40vw;
+    margin-left: 37vw; /* Adjust horizontal position */
+    margin-top: 1vh; /* Adjust vertical position */
     padding: 1vh;
     overflow-y: scroll;
     background-color: #f1f1f100;
@@ -160,8 +163,9 @@ hr {
 .scrollable-content div {
     background-color: white;
     border-radius: 1vh;
-    margin: 1vh 0;
+    margin: 4vh 0;
     padding: 2vh;
+    height: 50vh;
 }
 
 .scrollable-section::-webkit-scrollbar {
@@ -202,14 +206,6 @@ hr {
     background: #ccc;
 }
 
-.mole {
-    position: absolute;
-    bottom: 1vh; /* Position mole.png at the bottom */
-    right: 1vw; /* Position mole.png at the bottom right */
-    height: 8vh; /* Make mole.png smaller */
-    width: auto;
-}
-
 /* Adjustments for scaling with the screen size */
 body, html {
     transform: scale(1); /* Default scale */
@@ -234,4 +230,32 @@ body, html {
     body, html {
         transform: scale(0.4); /* Further adjust scale for very small screens */
     }
+}
+
+
+/* Container with background image */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: -30vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Semi-transparent overlay */
+    color: white; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
