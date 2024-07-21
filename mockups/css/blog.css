@@ -2,9 +2,9 @@ body, html {
     margin: 0;
     font-family: 'Coolvetica', sans-serif;
     overflow: hidden;
-    background-image: url(mockups/assets/bandbpage/bg_desktop.png);
-    background-size: cover; 
-    background-repeat: repeat-y; 
+    background-image: url(mockups/assets/bandbpage/background.png);
+    background-size: cover;
+    background-repeat: repeat-y;
     background-position: center center;
     background-color: #008DD2;
 }
@@ -12,154 +12,160 @@ body, html {
 @font-face {
     font-family: "Coolvetica V2";
     src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot");
-    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.svg#Coolvetica V2")format("svg");
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.svg#Coolvetica V2") format("svg");
 }
 
 .header {
     position: relative;
     background-color: #EA0F81;
-    height: 120px;
+    height: 23vh; /* Increase header height */
+    width: 100vw; /* Widen the header */
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
-    font-size: 24px;
+    font-size: 2vw; /* Use viewport width */
     font-weight: bold;
-    padding: 0 20px;
+    padding: 0 2vw;
+    box-sizing: border-box;
 }
 
 .header-title {
     color: white;
-    font-size: 24px;
+    font-size: 2vw; /* Use viewport width */
     font-weight: bold;
     font-family: 'Coolvetica';
-    margin-left: 90%;
-    margin-top: 2%;
-    font-size: small;
+    margin-left: auto;
+    margin-top: 1vh;
     flex-grow: 1;
-    z-index: 0; 
+    z-index: 0;
 }
 
-.logo1, .logo2, .logo3, .logo4, .logo5{
-    position: absolute; /* Position the images absolutely */
-    top: 50%; /* Vertically center the images */
-    transform: translateY(-50%); /* Adjust for centering */
-    height: 80px; /* Ensure the height fits within the header */
-    width: auto; /* Maintain aspect ratio */
-    z-index: 1; /* Ensure the images are above the text */
+.logo1, .logo2, .logo3, .logo4, .logo5 {
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
 .logo1 {
-    left: 50px; 
-    top: 60px;
-    margin-top: 4%;
-    height: 210%;
-    width: auto;
+    margin-left: 5vw; /* Position at the top left corner */
+    margin-top: 5vh; /* Adjust top position */
+    width: 25%;
+    height: auto;
 }
 
 .logo2 {
-    right: 20px; 
-    margin-right: 8%;
+    margin-right: 5%;
+    height: 6vh; /* Larger logos */
+    width: auto;
 }
 
 .logo3 {
-    margin-left: 90%;
+    left: 90vw;
+    top: 50%;
+    height: 10vh; /* Larger logos */
+    width: auto;
 }
 
-.logo4{
-    left: 60px;
-    margin-left: 20%;
+.logo4 {
+    left: 20vw;
+    top: 50%;
+    height: 10vh; /* Larger logos */
+    width: auto;
 }
 
-.logo5{
+.logo5 {
     transform: scaleX(-1);
-    margin-left:84%;
-    margin-top: 25%;
+    position: absolute;
+    margin-top: 70%;
+    margin-left: 70%;
+    height: 8vh; /* Make logo5 smaller */
+    width: auto;
 }
 
 .trapezoid {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 310px;
-    height: 0px;
-    border-top: 583px solid #68B436; 
-    border-right: 160px solid transparent; 
+    bottom: 0; /* Base at the bottom of the screen */
+    left: -10vw; /* Shift to the left */
+    width: 31vw;
+    height: 0;
+    border-top: 77vh solid #EF7F1A; /* Adjust border-top to reach the header */
+    border-right: 16vw solid transparent;
 }
 
-.sections{
+.sections {
     color: white;
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 4vw;
+    font-weight: bold;  
     font-family: 'Coolvetica';
-    margin-left: 70%;
-    margin-top: 40%;
-    font-size: large;
+    margin-left: 70vw;
+    margin-top: 30vh;
     flex-grow: 1;
-    z-index: 0; 
+    z-index: 0;
 }
 
 .side-text-small {
     position: absolute;
-    font-size: 30px;
-    top: 45%;
-    left: 1%;
+    font-size: 2vw;
+    top: 35vh;
+    left: 1vw;
     transform: translateY(-50%);
     color: white;
-    padding: 0 20px;
-    font-family: 'Coolvetica V2'; 
+    padding: 0 2vw;
+    font-family: 'Coolvetica V2';
     line-height: 1;
 }
 
 .side-text-large {
     position: absolute;
-    top: 65%;
-    left: 1%;
-    font-size: 45px;
+    top: 65vh;
+    left: 1vw;
+    font-size: 3vw;
     transform: translateY(-50%);
     color: white;
-    padding: 0 20px;
-    font-family: 'Coolvetica V2'; 
+    padding: 0 2vw;
+    font-family: 'Coolvetica V2';
     line-height: 0.9;
 }
 
 hr {
     border: none;
-    border-top: 2px solid white;
-    width: 210%;
+    border-top: 0.2vw solid white;
+    width: 25vw;
     margin: 20px 0;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .scrollable-section {
-    height: 500px;
-    width: 600px; 
-    margin-left: 35%;
-    padding: 10px;
+    height: 50vh;
+    width: 45vw; /* Slightly wider */
+    margin-left: 45vw; /* Slightly to the left */
+    padding: 1vh;
     overflow-y: scroll;
-    background-color: #f1f1f100; 
-    border-radius: 10px; 
+    background-color: #f1f1f100;
+    border-radius: 1vh;
+    box-sizing: border-box;
 }
 
 .scrollable-content {
-    height: 800px;
-    border-radius: 10px; 
-    padding: 20px;
+    height: 80vh;
+    border-radius: 1vh;
+    padding: 2vh;
 }
 
 .scrollable-content div {
     background-color: white;
-    border-radius: 10px;
-    margin: 10px 0;
-    padding: 20px;
+    border-radius: 1vh;
+    margin: 1vh 0;
+    padding: 2vh;
 }
 
 .scrollable-section::-webkit-scrollbar {
-    width: 15px; 
+    width: 1.5vw;
 }
 
 .scrollable-section::-webkit-scrollbar-track {
@@ -170,13 +176,13 @@ hr {
 }
 
 .scrollable-section::-webkit-scrollbar-thumb {
-    background: white; 
-    border-radius: 7px;
-    border: 2px solid transparent; 
-    background-clip: padding-box; 
-    height: 10px;
-    min-height: 10px;
-    max-height: 10px;
+    background: white;
+    border-radius: 0.7vh;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    height: 1vh;
+    min-height: 1vh;
+    max-height: 1vh;
 }
 
 .scrollable-section::-webkit-scrollbar-track-piece::before {
@@ -186,13 +192,46 @@ hr {
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 4px; 
-    background: white; 
+    width: 4px;
+    background: white;
     transform: translateX(-50%);
     border-radius: 2px;
 }
 
 .scrollable-section::-webkit-scrollbar-thumb:hover {
-    background: #ccc; 
+    background: #ccc;
 }
 
+.mole {
+    position: absolute;
+    bottom: 1vh; /* Position mole.png at the bottom */
+    right: 1vw; /* Position mole.png at the bottom right */
+    height: 8vh; /* Make mole.png smaller */
+    width: auto;
+}
+
+/* Adjustments for scaling with the screen size */
+body, html {
+    transform: scale(1); /* Default scale */
+    transform-origin: top left;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (max-width: 1200px) {
+    body, html {
+        transform: scale(0.8); /* Adjust scale for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body, html {
+        transform: scale(0.6); /* Further adjust scale for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body, html {
+        transform: scale(0.4); /* Further adjust scale for very small screens */
+    }
+}
