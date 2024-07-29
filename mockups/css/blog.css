@@ -1,0 +1,272 @@
+body, html {
+    margin: 0;
+    font-family: 'Coolvetica', sans-serif;
+    overflow: hidden;
+    background-image: url(mockups/assets/bandbpage/background.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-color: #008DD2;
+}
+
+@font-face {
+    font-family: "Coolvetica V2";
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot");
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.svg#Coolvetica V2") format("svg");
+}
+
+.header {
+    position: relative;
+    background-color: #EA0F81;
+    height: 20vh; /* Increase header height */
+    width: 100vw; /* Widen the header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 2vw; /* Use viewport width */
+    font-weight: bold;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+.header-title {
+    color: white;
+    font-size: 2vw; /* Use viewport width */
+    font-weight: bold;
+    font-family: 'Coolvetica';
+    margin-left: auto;
+    margin-top: 1vh;
+    flex-grow: 1;
+    z-index: 0;
+}
+
+
+.logo1, .logo2, .logo3, .logo4, .logo5 {
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.logo1 {
+    margin-left: 5vw; /* Position at the top left corner */
+    margin-top: 45vh; /* Adjust top position */
+    width: 20%;
+    height: auto;
+}
+
+.logo2 {
+    margin-left: 75vw;
+    margin-top: 8vh;
+    height: 12vh; /* Larger logos */
+    width: auto;
+}
+
+.logo3 {
+    left: 85vw;
+    top: 9vh;
+    height: 17vh; /* Larger logos */
+    width: auto;
+}
+
+.logo4 {
+    left: 30vw;
+    top: 50%;
+    height: 12vh; /* Larger logos */
+    width: auto;
+}
+
+.logo5 {
+    transform: scaleX(-1);
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 80%;
+    height: 32vh; /* Make logo5 smaller */
+    width: auto;
+}
+
+.trapezoid {
+    position: absolute;
+    bottom: 0; /* Base at the bottom of the screen */
+    left: 0%; /* Shift to the left */
+    width: 25vw;
+    height: 0;
+    border-top: 80vh solid #EF7F1A; /* Adjust border-top to reach the header */
+    border-right: 10vw solid transparent;
+}
+
+.sections {
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;  
+    font-family: 'Coolvetica';
+    margin-left: 70vw;
+    margin-top: 30vh;
+    flex-grow: 1;
+    z-index: 0;
+}
+
+.side-text-small {
+    position: absolute;
+    font-size: 2vw;
+    top: 45vh;
+    left: 2vw;
+    transform: translateY(-50%);
+    color: white;
+    padding: 0 2vw;
+    font-family: 'Coolvetica V2';
+    line-height: 1;
+}
+
+.side-text-large {
+    position: absolute;
+    top: 65vh;
+    left: 2vw;
+    font-size: 3vw;
+    transform: translateY(-50%);
+    color: white;
+    padding: 0 2vw;
+    font-family: 'Coolvetica V2';
+    line-height: 0.9;
+}
+
+hr {
+    border: none;
+    border-top: 0.2vw solid white;
+    width: 25vw;
+    margin: 20px 0;
+    margin-top: 0;
+}
+
+html {
+    background-color: #242424;
+    color-scheme: dark;
+    min-height: 100vh;
+  }
+  
+  body {
+    margin: 1.5rem 1rem 1rem;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  
+  h1 {
+    margin: 0 0 2rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .scrollArea {
+    position: relative;
+    margin: 0 auto;
+    padding-right: 28px;
+    max-width: 520px;
+    height: calc(100vh - 1.5rem - 1rem);
+    overflow-y: clip;
+  }
+  .scrollArea .content {
+    display: block;
+    padding-bottom: 0.5rem;
+    transition: transform 0.1s linear;
+  }
+  
+  .scrollArea .scrollbar {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #363636;
+  }
+  .scrollArea .scrollbar .thumb {
+    all: unset;
+    position: absolute;
+    width: 20px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #363636;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+    user-select: none;
+    touch-action: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      min-width: 44px;
+      min-height: 44px;
+    }
+  }
+
+
+/* Adjustments for scaling with the screen size */
+body, html {
+    transform: scale(1); /* Default scale */
+    transform-origin: top left;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (max-width: 1200px) {
+    body, html {
+        transform: scale(0.8); /* Adjust scale for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body, html {
+        transform: scale(0.6); /* Further adjust scale for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body, html {
+        transform: scale(0.4); /* Further adjust scale for very small screens */
+    }
+}
+
+
+/* Container with background image */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: -30vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Semi-transparent overlay */
+    color: white; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
