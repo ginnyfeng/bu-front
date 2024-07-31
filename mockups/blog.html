@@ -1,82 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f2f2f" />
     <meta name="author" content="Owen Feng" />
     <meta name="application-name" content="building-U" />
-    <meta
-      name="description"
-      content="At building-U, we think that how high school students think and how they look at their future are both pretty important. Our mission is to support them with different tools that they can use to effectively help themselves as they decide on and prepare for what comes next."
-    />
-
+    <meta name="description" content="At building-U, we think that how high school students think and how they look at their future are both pretty important. Our mission is to support them with different tools that they can use to effectively help themselves as they decide on and prepare for what comes next." />
     <link rel="stylesheet" href="css/blog.css">
     <link href="https://fonts.googleapis.com/css2?family=Coolvetica&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <title>building-U | A Place for Post Secondary Plans</title>
-  </head>
-  <body>
+</head>
+<body>
     <div id="root"></div>
     <section id="bandbsection">
-      <div class="header">
-        <img src="" alt="down to u logo" class="logo1">
-        <img src="assets/" alt="we are a building-u blog" class="logo4">
-        <img src="./mockups/assets/bandbpage/btn_go-back.png" alt="blog and beyond" class="logo2">
-        <img src="./mockups/assets/bandbpage/btn_06-signup.png" alt="sign in" class="logo3">
-        <img src="./mockups/assets/bandbpage/img_mole2.png" alt="mole" class="logo5">
-      </div>
-      <div class="trapezoid"></div>
-      <div class="side-text-small">Archives<hr></div><br>
-      <div class="side-text-large">All<br>Academics<br>Climate Change<br>Finance<br>Growth<br>Technology<br></div>
-      <div src="mockups/assets/bandbpage/bg_desktop.png" alt="background"></div>
-    <div class="scrollArea">
-      <div class="content">
-        <h1>The Scrollbar</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          malesuada vehicula placerat. Duis fermentum magna ac mauris tempus
-          tincidunt id a lorem. Nulla consequat iaculis ipsum. In lacus lectus,
-          molestie quis luctus sed, ullamcorper eu nunc. Integer convallis mi sed
-          elit facilisis suscipit. Etiam fringilla tellus nec convallis iaculis.
-          Nulla ac ipsum ut dui feugiat bibendum. In mollis tempor consectetur.
-          Praesent ultricies fermentum mauris eget fringilla. Quisque ornare
-          ultricies cursus. Phasellus vitae magna nisi. Fusce sem metus, venenatis
-          interdum tellus id, ornare eleifend tellus. Donec tempor massa tempor
-          neque efficitur scelerisque. Praesent ultricies, metus non tristique
-          pulvinar, urna turpis euismod quam, sit amet pellentesque risus leo
-          convallis nisi.
-          <br /> <br />
-          Praesent feugiat a dui in blandit. Curabitur eget rutrum metus. Aliquam
-          porta enim non orci cursus, at vestibulum erat commodo. Nunc diam mi,
-          cursus id ante quis, commodo tempor leo. Quisque sed placerat risus.
-          Cras vitae malesuada ligula. Etiam vel dictum mauris. Pellentesque
-          habitant morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas. Nullam facilisis sodales volutpat. Etiam consectetur ornare
-          mollis. Aliquam bibendum mi in hendrerit facilisis. Nullam ullamcorper
-          dignissim elementum. Fusce pulvinar neque eget quam tristique, ut
-          pellentesque neque efficitur. Aenean in arcu lorem. Morbi sit amet
-          interdum eros. Sed finibus consequat sem, porta tempor justo imperdiet
-          tempus.
-          <br /> <br />
-          Mauris non purus et turpis dictum tincidunt a nec augue. Mauris
-          sagittis, dui eu suscipit volutpat, turpis lorem condimentum nunc, ac
-          consectetur ex dolor sed magna. Duis consectetur elit quam, non
-          convallis arcu scelerisque in. Fusce metus tellus, auctor eget viverra
-          sagittis, lacinia eget dui. Aenean leo est, luctus sed accumsan at,
-          sodales a velit. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Curabitur consectetur laoreet tincidunt. Pellentesque quam purus,
-          volutpat nec ligula eget, porta placerat est. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Sed sollicitudin enim vitae augue
-          posuere ultricies. Etiam a erat aliquet, fermentum arcu vel, condimentum
-          urna. Fusce at cursus ligula. Nulla quam ante, imperdiet a erat a,
-          malesuada dictum sem. Sed nec erat libero.
-        </p>
-      </div>
-      <div class="scrollbar">
-        <button class="thumb"></button>
-      </div>
-    </div>
-    <script type="module" src="/scripts/scrollbar.js"></script>
-  </body>
+        <div class="header">
+            <img src="assets/bandbpage/img_downtou-logo.png" alt="down to u logo" class="logo1">
+            <img src="assets/bandbpage/img_weare-logo.png" alt="we are a building-u blog" class="logo4">
+            <img src="assets/bandbpage/btn_go-back.png" alt="blog and beyond" class="logo2">
+            <img src="assets/bandbpage/btn_06-signup.png" alt="sign in" class="logo3">
+            <img src="assets/bandbpage/img_mole2.png" alt="mole" class="logo5">
+        </div>
+
+        <div class="scrollArea" id="scrollable">
+            <div class="content" id="content">
+                <!-- Content blocks will be added dynamically here -->
+            </div>
+            <div class="scrollbar">
+                <button class="thumb"></button>
+            </div>
+        </div>
+
+        <script type="module">
+            document.addEventListener('DOMContentLoaded', () => {
+                const content = document.getElementById('content');
+                const scrollable = document.getElementById('scrollable');
+
+                function addContentBlocks(count) {
+                    for (let i = 0; i < count; i++) {
+                        const block = document.createElement('div');
+                        block.className = 'content-block';
+                        block.textContent = `Content Block ${content.children.length + 1}`;
+                        content.appendChild(block);
+                    }
+                }
+
+                // Initial content
+                addContentBlocks(10);
+
+                scrollable.addEventListener('scroll', () => {
+                    const scrollTop = scrollable.scrollTop;
+                    const scrollHeight = scrollable.scrollHeight;
+                    const clientHeight = scrollable.clientHeight;
+
+                    // Check if scrolled to the bottom
+                    if (scrollTop + clientHeight >= scrollHeight - 10) {
+                        addContentBlocks(5); // Add more content blocks
+                    }
+                });
+            });
+
+            $(document).ready(function() {
+                $(".scrollArea").mCustomScrollbar({
+                    theme: "minimal-dark", // Choose a theme or customize
+                    axis: "y", // Vertical scrollbar
+                    scrollInertia: 200, // Adjust scrolling speed
+                    scrollbarPosition: "outside", // Position the scrollbar outside
+                    advanced: {
+                        updateOnContentResize: true
+                    },
+                    setWidth: false,
+                    setHeight: false,
+                    callbacks: {
+                        onTotalScrollOffset: 20
+                    },
+                    autoExpandScrollbar: true
+                });
+            });
+          </script>
+          
+  
+
+        <div class="background-container">
+            <div class="overlay">
+                <img src="assets/bandbpage/background.png" alt="background shapes" class="background shapes">
+            </div>
+        </div>
+
+        <div class="trapezoid"></div>
+        <div class="side-text-small">Archives<hr></div><br>
+        <div class="side-text-large">All<br>Academics<br>Climate Change<br>Finance<br>Growth<br>Technology<br></div>
+
+        <section class="mobile-section">
+            <section id="bandbphonesection">
+                <div class="header">
+                    <img src="assets/bandbpage(phone)/01_blog.png" alt="down to u blog" class="logo1">
+                    <img src="assets/bandbpage/img_weare-logo.png" alt="we are a building-u blog" class="logo4">
+                    <img src="assets/bandbpage/btn_go-back.png" alt="blog and beyond" class="logo2">
+                    <img src="assets/bandbpage/btn_06-signup.png" alt="sign in" class="logo3">
+                    <img src="assets/bandbpage/img_mole2.png" alt="mole" class="logo5">
+                </div>
+            </section>
+        </section>
+    </section>
+</body>
 </html>
