@@ -1,0 +1,121 @@
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../assets/bandbpage\(phone\)/background');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    background-color: #EA0F81;
+}
+
+@font-face {
+    font-family: "Coolvetica V2";
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot");
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.svg#Coolvetica V2") format("svg");
+}
+
+/* Header */
+.header {
+    position: relative;
+    background-color: #EF7F1A;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+
+.header-title {
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Coolvetica';
+    margin-left: auto;
+    margin-top: 1vh;
+    flex-grow: 1;
+    z-index: 0;
+}
+
+.blog, .spotify, .youtube, .goat, .menu, .blognbeyond{
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 1;
+    max-width:100%;
+}
+
+.blog {
+    margin-left: 10vw;
+    margin-top:65vh;
+    width: 40%;
+    max-width:100%;
+    height: auto;
+}
+
+.spotify {
+    margin-left: 55vw;
+    margin-top: 95vh;
+    width: 30%;
+    max-width:100%;
+    height: auto;
+}
+
+.youtube {
+    margin-left: 15vw;
+    margin-top: 115vh;
+    width: 35%;
+    max-width:100%;
+    height: auto;
+}
+
+.goat {
+    margin-left: 65vw;
+    margin-top: 170vh;
+    width: 30%;
+    max-width:100%;
+    height: auto;
+}
+
+.menu {
+    margin-left: 67vw;
+    margin-top: 12vh;
+    width: 24%;
+    max-width:100%;
+    height: auto;
+}
+
+.blognbeyond {
+    margin-left: 8vw;
+    margin-top: 10vh;
+    width: 55%;
+    max-width:100%;
+    height: auto;
+}
+
+.bottom {
+    position: relative;
+    background-color: #68b436;
+    top:315px;
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}

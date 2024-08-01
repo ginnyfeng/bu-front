@@ -14,6 +14,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <title>building-U | A Place for Post Secondary Plans</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          if (window.innerWidth < 600) {
+            window.location.href = "blogmob.html";
+          }
+        });
+      
+        window.addEventListener('resize', function() {
+          if (window.innerWidth < 600) {
+            window.location.href = "blogmob.html";
+          } else {
+            window.location.href = "blogmob.html"; // Optional: Redirect back to the main page if resized above 600px
+          }
+        });
+      </script>
+      
 </head>
 <body>
     <div id="root"></div>
@@ -94,18 +111,6 @@
         <div class="trapezoid"></div>
         <div class="side-text-small">Archives<hr></div><br>
         <div class="side-text-large">All<br>Academics<br>Climate Change<br>Finance<br>Growth<br>Technology<br></div>
-
-        <section class="mobile-section">
-            <section id="bandbphonesection">
-                <div class="header">
-                    <img src="assets/bandbpage(phone)/01_blog.png" alt="down to u blog" class="logo1">
-                    <img src="assets/bandbpage/img_weare-logo.png" alt="we are a building-u blog" class="logo4">
-                    <img src="assets/bandbpage/btn_go-back.png" alt="blog and beyond" class="logo2">
-                    <img src="assets/bandbpage/btn_06-signup.png" alt="sign in" class="logo3">
-                    <img src="assets/bandbpage/img_mole2.png" alt="mole" class="logo5">
-                </div>
-            </section>
-        </section>
     </section>
 </body>
 </html>

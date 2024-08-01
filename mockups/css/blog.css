@@ -53,12 +53,14 @@ body, html {
     position: absolute;
     transform: translateY(-50%);
     z-index: 1;
+    max-width:100%;
 }
 
 .logo1 {
     margin-left: 5vw;
     margin-top: 45vh;
     width: 20%;
+    max-width:100%;
     height: auto;
 }
 
@@ -200,20 +202,25 @@ hr {
 
 
 
-@media (max-width: 1200px) {
-    body, html {
-        transform: scale(0.8);
+@media (min-width: 600px) {
+    .container {
+      width: 80%;
+      margin: 0 auto;
     }
-}
+  }
+  
+  /* Styles for large desktops */
+  @media (min-width: 1200px) {
+    .container {
+      width: 60%;
+    }
+  }
+  
+  /* Styles for mobile devices */
+  @media (max-width: 599px) {
+    .container {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
 
-@media (max-width: 768px) {
-    body, html {
-        transform: scale(0.6);
-    }
-}
-
-@media (max-width: 480px) {
-    body, html {
-        transform: scale(0.4);
-    }
-}
