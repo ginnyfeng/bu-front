@@ -3,12 +3,12 @@ body, html {
     font-family: Arial, sans-serif; 
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     background-image: url('../assets/bandbpage\(phone\)/background');
-    background-size: cover;
-    background-repeat: repeat-y;
-    background-position: center;
+    background-size: auto; /* Allows the image to maintain its original size */
+    background-repeat: repeat; /* Repeats the background both horizontally and vertically */
+    background-position: center top; /* Aligns the background to the top center */
     background-color: #EA0F81;
+    overflow: hidden; /* Hides horizontal overflow */
 }
 
 @font-face {
@@ -81,6 +81,7 @@ body, html {
 }
 
 .goat {
+    position: fixed;
     margin-left: 65vw;
     margin-top: 170vh;
     width: 30%;
@@ -105,9 +106,9 @@ body, html {
 }
 
 .bottom {
-    position: relative;
+    position: fixed; /* or use 'absolute' if the parent element has 'position: relative;' */
     background-color: #68b436;
-    top:315px;
+    bottom: 0; /* Sticks to the bottom of the viewport */
     height: 25vh;
     width: 100vw;
     display: flex;
@@ -118,4 +119,41 @@ body, html {
     font-weight: bold;
     padding: 0 2vw;
     box-sizing: border-box;
+}
+
+.bottom-text {
+    z-index: 15;
+    font-family: 'Coolvetica V2', sans-serif; /* Use Coolvetica V2 */
+    font-size: 5vw; /* Adjust size to fit within the green bar */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    line-height: 1.2; /* Adjust line height if needed */
+    padding: 0 2vw; /* Optional padding */
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
+
+.pink-bar {
+    position: fixed; /* Sticks to the bottom of the viewport */
+    background-color: #EA0F81; /* Pink color */
+    bottom: 0; /* Aligns it to the bottom */
+    height: 6vh; /* Thin bar, adjust as needed */
+    width: 100vw; /* Full width */
+    z-index: 10; /* Higher z-index to take priority over the green bar */
+    box-sizing: border-box;
+    font-family: 'Coolvetica V2', sans-serif;
+    justify-content: space-between; /* More space between logos */
+    padding: 0 4vw; /* Adjust padding for more spacing */
+    color: white;
+}
+
+.logo {
+    width: 6vw; /* Adjust to control the size of the logos */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 4vh; /* Ensure the logos fit within the pink bar */
+    display: inline-block;
+    display: inline-block; 
+    font-family: 'Coolvetica V2', sans-serif;
+    color: white;
+    margin: 0 3vw;
 }
