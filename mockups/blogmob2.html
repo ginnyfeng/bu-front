@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobile Blog blue</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/blogmob2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Coolvetica&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    </head>
+    <body>
+
+    <div id="root"></div>
+    <section id="bandbphonesection">
+        <div class="header">
+            <img src="assets/bandbpage/img_downtou-logo.png" alt="downtou" class="downtou">
+            <img src="assets/bandbpage(phone)/01-logo-button-normal-white.png" alt="menu button" class="menu">
+            <img src="assets/bandbpage(phone)/03-btn-blogandbeyond.png" alt="blog and beyond" class="blognbeyond">
+        </div>
+        <div class="pink-bar">
+          Powered by
+          <img src="path-to-logo1.png" alt="Logo 1" class="logo">
+          <img src="path-to-logo2.png" alt="Logo 2" class="logo">
+          <img src="path-to-logo3.png" alt="Logo 3" class="logo">
+          <img src="path-to-logo4.png" alt="Logo 4" class="logo">
+          <img src="path-to-logo5.png" alt="Logo 5" class="logo">
+        </div>
+
+        <div class="scrollArea" id="scrollable">
+            <div class="content" id="content">
+                <!-- Content blocks will be added dynamically here -->
+            </div>
+            <div class="scrollbar">
+                <button class="thumb"></button>
+            </div>
+        </div>
+
+        <script type="module">
+            document.addEventListener('DOMContentLoaded', () => {
+                const content = document.getElementById('content');
+                const scrollable = document.getElementById('scrollable');
+
+                function addContentBlocks(count) {
+                    for (let i = 0; i < count; i++) {
+                        const block = document.createElement('div');
+                        block.className = 'content-block';
+                        block.textContent = `Content Block ${content.children.length + 1}`;
+                        content.appendChild(block);
+                    }
+                }
+
+                // Initial content
+                addContentBlocks(10);
+
+                scrollable.addEventListener('scroll', () => {
+                    const scrollTop = scrollable.scrollTop;
+                    const scrollHeight = scrollable.scrollHeight;
+                    const clientHeight = scrollable.clientHeight;
+
+                    // Check if scrolled to the bottom
+                    if (scrollTop + clientHeight >= scrollHeight - 10) {
+                        addContentBlocks(5); // Add more content blocks
+                    }
+                });
+            });
+
+            $(document).ready(function() {
+                $(".scrollArea").mCustomScrollbar({
+                    theme: "minimal-dark", // Choose a theme or customize
+                    axis: "y", // Vertical scrollbar
+                    scrollInertia: 200, // Adjust scrolling speed
+                    scrollbarPosition: "outside", // Position the scrollbar outside
+                    advanced: {
+                        updateOnContentResize: true
+                    },
+                    setWidth: false,
+                    setHeight: false,
+                    callbacks: {
+                        onTotalScrollOffset: 20
+                    },
+                    autoExpandScrollbar: true
+                });
+            });
+          </script>
+
+        <div class="background-container">
+          <div class="overlay">
+              <img src="assets/bandbpage/background.png" alt="background shapes" class="background shapes">
+          </div>
+        </div>
+    </body>
+</html>

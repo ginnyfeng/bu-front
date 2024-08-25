@@ -1,0 +1,197 @@
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/bandbpage\(phone\)/background');
+    background-size: auto; /* Allows the image to maintain its original size */
+    background-repeat: repeat; /* Repeats the background both horizontally and vertically */
+    background-position: center top; /* Aligns the background to the top center */
+    background-color: #008DD2;
+    overflow: hidden; /* Hides horizontal overflow */
+}
+
+@font-face {
+    font-family: "Coolvetica V2";
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot");
+    src: url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.svg#Coolvetica V2") format("svg");
+}
+
+/* Header */
+.header {
+    position: relative;
+    background-color: #EF7F1A;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+
+.header-title {
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Coolvetica';
+    margin-left: auto;
+    margin-top: 1vh;
+    flex-grow: 1;
+    z-index: 0;
+}
+
+.menu, .blognbeyond, .downtou{
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 1;
+    max-width:100%;
+}
+
+.menu {
+    margin-left: 67vw;
+    margin-top: 12vh;
+    width: 24%;
+    max-width:100%;
+    height: auto;
+}
+
+.blognbeyond {
+    margin-left: 8vw;
+    margin-top: 10vh;
+    width: 55%;
+    max-width:100%;
+    height: auto;
+}
+
+.downtou{
+    margin-left: 10vw;
+    margin-top:65vh;
+    width: 40%;
+    max-width:100%;
+    height: auto;
+}
+
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari) */
+.scrollArea::-webkit-scrollbar {
+    width: 20px; /* Total width of the scrollbar track */
+}
+
+.scrollArea::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track background */
+}
+
+.scrollArea::-webkit-scrollbar-thumb {
+    background-color: white; /* White scrollbar handle */
+    border-radius: 50px; /* Rounded edges */
+    border: 4px solid transparent; /* Creates the gap between the scrollbar and the track */
+    background-clip: content-box; /* Ensures the scrollbar handle retains its width */
+    width: 12px; /* Width of the scrollbar handle */
+    height: 40px; /* Fixed height of the scrollbar handle */
+}
+
+/* Add vertical white line behind the scrollbar */
+.scrollArea::before {
+    content: "";
+    position: absolute;
+    margin-left: 98.7%;
+    width: 2px;
+    background: white;
+    z-index: 0; /* Place the line behind the scrollbar */
+}
+
+/* Scrollable area adjustments */
+.scrollArea {
+    position: absolute;
+    left: 40vw; /* Shift the scroll area more to the left */
+    top: calc(20vh + 10px); /* Close to the header but not touching it */
+    width: 40vw; /* Make the scroll area wider */
+    bottom: 2%; /* Leave space from the bottom */
+    padding-right: 22px; /* Separate the scrollbar from the content and make space for the line */
+    background: transparent; /* Keep the background transparent */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide default scrollbars */
+    border: none; /* Remove the border outline */
+}
+
+/* Content blocks */
+.scrollArea .content {
+    padding: 10px;
+    margin-right: 10px; /* Shift content blocks to the left */
+}
+
+.scrollArea .content .content-block {
+    height: 100px;
+    background: white; /* White background for content blocks */
+    border: none; /* Remove border if needed */
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.bottom {
+    position: fixed; /* or use 'absolute' if the parent element has 'position: relative;' */
+    background-color: #68b436;
+    bottom: 0; /* Sticks to the bottom of the viewport */
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+.bottom-text {
+    z-index: 15;
+    font-family: 'Coolvetica V2', sans-serif; /* Use Coolvetica V2 */
+    font-size: 5vw; /* Adjust size to fit within the green bar */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    line-height: 1.2; /* Adjust line height if needed */
+    padding: 0 2vw; /* Optional padding */
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
+
+.pink-bar {
+    position: fixed; /* Sticks to the bottom of the viewport */
+    background-color: #EA0F81; /* Pink color */
+    bottom: 0; /* Aligns it to the bottom */
+    height: 6vh; /* Thin bar, adjust as needed */
+    width: 100vw; /* Full width */
+    z-index: 10; /* Higher z-index to take priority over the green bar */
+    box-sizing: border-box;
+    font-family: 'Coolvetica V2', sans-serif;
+    justify-content: space-between; /* More space between logos */
+    padding: 0 4vw; /* Adjust padding for more spacing */
+    color: white;
+}
+
+.logo {
+    width: 6vw; /* Adjust to control the size of the logos */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 4vh; /* Ensure the logos fit within the pink bar */
+    display: inline-block;
+    display: inline-block; 
+    font-family: 'Coolvetica V2', sans-serif;
+    color: white;
+    margin: 0 3vw;
+}
