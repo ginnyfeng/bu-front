@@ -112,26 +112,25 @@ body, html {
 /* Scrollable area adjustments */
 .scrollArea {
     position: absolute;
-    left: 40vw; /* Shift the scroll area more to the left */
     top: calc(20vh + 10px); /* Close to the header but not touching it */
-    width: 40vw; /* Make the scroll area wider */
     bottom: 2%; /* Leave space from the bottom */
-    padding-right: 22px; /* Separate the scrollbar from the content and make space for the line */
+    padding-right: 10px; /* Separate the scrollbar from the content and make space for the line */
     background: transparent; /* Keep the background transparent */
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide default scrollbars */
     border: none; /* Remove the border outline */
 }
 
-/* Content blocks */
 .scrollArea .content {
     padding: 10px;
-    margin-right: 10px; /* Shift content blocks to the left */
+    margin-top:40px;
 }
 
 .scrollArea .content .content-block {
     height: 100px;
+    width: 450px;
+    margin-left:auto;
+    margin-right:auto;
     background: white; /* White background for content blocks */
     border: none; /* Remove border if needed */
     margin: 10px 0;
