@@ -10,6 +10,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     </head>
     <body>
+    
+        <button class="back-button">Back</button>
+
 
     <div id="root"></div>
     <section id="bandbphonesection">
@@ -26,7 +29,11 @@
           <img src="path-to-logo4.png" alt="Logo 4" class="logo">
           <img src="path-to-logo5.png" alt="Logo 5" class="logo">
         </div>
-
+    
+        
+        <!-- Below your header or wherever you want the "Archives" rectangle -->
+        <div class="archives-bar">Archives</div>
+        
         <div class="scrollArea" id="scrollable">
             <div class="content" id="content">
                 <!-- Content blocks will be added dynamically here -->
@@ -51,7 +58,7 @@
                 }
 
                 // Initial content
-                addContentBlocks(10);
+                addContentBlocks(2);
 
                 scrollable.addEventListener('scroll', () => {
                     const scrollTop = scrollable.scrollTop;

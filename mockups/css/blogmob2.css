@@ -21,6 +21,26 @@ body, html {
     url("https://db.onlinewebfonts.com/t/06594b8e23c284f33b51e05d8145f62d.svg#Coolvetica V2") format("svg");
 }
 
+
+button.back-button {
+    background-color: #68b436; 
+    color: white;
+    font-family: 'Coolvetica V2', sans-serif;
+    font-size: 10vw; 
+    border: none;
+    padding: 6vw 8vw;
+    border-radius: 12px; /* Rounded corners */
+    position: absolute;
+    right: 7vw; /* Position it more to the right */
+    top: 20vh; /* Align with downtou logo */
+    cursor: pointer;
+    z-index: 100; /* Ensure it's on top of other elements */
+    display: block; /* Ensure it's visible */
+    background: #68b436; /* Ensure the background is solid */
+    box-shadow: none; /* Remove any shadow effects */
+    outline: none; /* Remove default focus outline */
+}
+
 /* Header */
 .header {
     position: relative;
@@ -35,6 +55,66 @@ body, html {
     font-weight: bold;
     padding: 0 2vw;
     box-sizing: border-box;
+}
+  
+/* Downtou Logo */
+.downtou {
+    position: absolute;
+    top:10vh;
+    left:0vw;
+    max-width:100%;
+    width: 50%; /* Adjust width if needed */
+    height:auto;
+    z-index: 100; /* Ensure it's on top of other elements */
+}
+
+/* Archives Rectangle */
+.archives-bar {
+    background-color: #EF7F1A; /* Solid orange color */
+    color: white;
+    font-family: 'Coolvetica V2', sans-serif;
+    font-size: 10vw; /* Adjust size for readability */
+    padding: 2vw; /* Add padding for spacing */
+    margin-top: 20vh;
+    margin-left:5vw;
+    width: 90%; /* Centered at 80% of the viewport width */
+    border-radius: 10px; /* Add rounded corners for a modern look */
+    box-sizing: border-box;
+    z-index: 100; /* Ensure it's on top of other elements */
+    display: block; /* Ensure it's visible */
+    position: relative; /* Ensure it's above other elements */
+}
+
+/* Menu Bar */
+.menu {
+    position: absolute;
+    top: 5vh; /* Align with downtou logo and back button */
+    right: 2vw; /* Align with back button */
+    width: 20vw; /* Adjust width if needed */
+    z-index: 100; /* Ensure it's on top of other elements */
+    background-color: #EF7F1A; /* Solid background color */
+    padding: 1vw; /* Adjust padding */
+}
+
+
+/* Background Image */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Ensure it's behind all other elements */
+}
+
+.background.shapes {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensure it covers the entire background */
+    z-index: 0; /* Ensure it's behind all other elements */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
@@ -56,14 +136,6 @@ body, html {
     max-width:100%;
 }
 
-.menu {
-    margin-left: 67vw;
-    margin-top: 12vh;
-    width: 24%;
-    max-width:100%;
-    height: auto;
-}
-
 .blognbeyond {
     margin-left: 8vw;
     margin-top: 10vh;
@@ -74,7 +146,7 @@ body, html {
 
 .downtou{
     margin-left: 10vw;
-    margin-top:65vh;
+    margin-top:15vh;
     width: 40%;
     max-width:100%;
     height: auto;
@@ -112,15 +184,17 @@ body, html {
 /* Scrollable area adjustments */
 .scrollArea {
     position: absolute;
-    top: calc(20vh + 10px); /* Close to the header but not touching it */
+    margin-top: 40vh; /* Adjusted to leave space below the Archives bar */
     bottom: 2%; /* Leave space from the bottom */
     padding-right: 10px; /* Separate the scrollbar from the content and make space for the line */
     background: transparent; /* Keep the background transparent */
     border-radius: 15px;
-    overflow: hidden; /* Hide default scrollbars */
+    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 50; /* Ensure it's below the archives-bar */
     border: none; /* Remove the border outline */
 }
 
+/* Content Blocks */
 .scrollArea .content {
     padding: 10px;
     margin-top:40px;

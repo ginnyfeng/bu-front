@@ -123,15 +123,19 @@ body, html {
 
 .bottom-text {
     z-index: 15;
-    font-family: 'Coolvetica V2', sans-serif; /* Use Coolvetica V2 */
-    font-size: 5vw; /* Adjust size to fit within the green bar */
-    color: white; /* Text color */
-    text-align: center; /* Center the text */
-    line-height: 1.2; /* Adjust line height if needed */
-    padding: 0 2vw; /* Optional padding */
-    margin: 0; /* Remove any default margin */
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
+    font-family: 'Coolvetica V2', sans-serif;
+    font-size: 8vw; /* Maintain a larger font for mobile readability */
+    color: white;
+    line-height: 1.2;
+    box-sizing: border-box;
+
+    position: absolute; /* Allows precise control */
+    left: 5vw; /* Shift to the left */
+    bottom: 30%; /* Adjust to move the text up */
+    text-align: center;
+    width: 80vw; /* Adjust width for fitting in the bar */
 }
+
 
 .pink-bar {
     position: fixed; /* Sticks to the bottom of the viewport */
