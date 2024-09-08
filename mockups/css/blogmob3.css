@@ -71,23 +71,6 @@ button.back-button {
     z-index: 100; /* Ensure it's on top of other elements */
 }
 
-/* Archives Rectangle */
-.archives-bar {
-    background-color: #EF7F1A; /* Solid orange color */
-    color: white;
-    font-family: 'Coolvetica V2', sans-serif;
-    font-size: 10vw; /* Adjust size for readability */
-    padding: 2vw; /* Add padding for spacing */
-    margin-top: 20vh;
-    margin-left:5vw;
-    width: 90%; /* Centered at 80% of the viewport width */
-    border-radius: 10px; /* Add rounded corners for a modern look */
-    box-sizing: border-box;
-    z-index: 100; /* Ensure it's on top of other elements */
-    display: block; /* Ensure it's visible */
-    position: relative; /* Ensure it's above other elements */
-}
-
 /* Menu Bar */
 .menu {
     position: absolute;
@@ -155,97 +138,39 @@ button.back-button {
     height: auto;
 }
 
-
-/* Custom scrollbar for WebKit browsers (Chrome, Safari) */
-.scrollArea::-webkit-scrollbar {
-    width: 20px; /* Total width of the scrollbar track */
+hr {
+    border: none;
+    border-top: 0.2vw solid white;
+    width: 25vw;
+    margin: 20px 0;
+    margin-top: 0;
 }
 
-.scrollArea::-webkit-scrollbar-track {
-    background: transparent; /* Transparent track background */
-}
-
-.scrollArea::-webkit-scrollbar-thumb {
-    background-color: white; /* White scrollbar handle */
-    border-radius: 50px; /* Rounded edges */
-    border: 4px solid transparent; /* Creates the gap between the scrollbar and the track */
-    background-clip: content-box; /* Ensures the scrollbar handle retains its width */
-    width: 12px; /* Width of the scrollbar handle */
-    height: 40px; /* Fixed height of the scrollbar handle */
-}
-
-/* Add vertical white line behind the scrollbar */
-.scrollArea::before {
-    content: "";
+/* Side Text Small */
+.side-text-small {
     position: absolute;
-    margin-left: 98.7%;
-    width: 2px;
-    background: white;
-    z-index: 0; /* Place the line behind the scrollbar */
-}
-
-/* Scrollable area adjustments */
-.scrollArea {
-    position: absolute;
-    margin-bottom: 20vh;
-    bottom: 2%; /* Leave space from the bottom */
-    padding-right: 10px; /* Separate the scrollbar from the content and make space for the line */
-    background: transparent; /* Keep the background transparent */
-    border-radius: 15px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    z-index: 50; /* Ensure it's below the archives-bar */
-    border: none; /* Remove the border outline */
-}
-
-/* Content Blocks */
-.scrollArea .content {
-    padding: 10px;
-    margin-top:40px;
-}
-
-.scrollArea .content .content-block {
-    height: 10vh;
-    width: 90vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    background: white; /* White background for content blocks */
-    border: none; /* Remove border if needed */
-    margin: 10px 0;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-sizing: border-box;
-}
-
-.bottom {
-    position: fixed; /* or use 'absolute' if the parent element has 'position: relative;' */
-    background-color: #68b436;
-    bottom: 0; /* Sticks to the bottom of the viewport */
-    height: 25vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 8vw; /* Increased from 2vw to 8vw */
+    top: 45vh;
+    left: 2vw;
+    transform: translateY(-50%);
     color: white;
-    font-size: 2vw;
-    font-weight: bold;
     padding: 0 2vw;
-    box-sizing: border-box;
+    font-family: 'Coolvetica V2';
+    line-height: 1;
 }
 
-.bottom-text {
-    z-index: 15;
-    font-family: 'Coolvetica V2', sans-serif; /* Use Coolvetica V2 */
-    font-size: 5vw; /* Adjust size to fit within the green bar */
-    color: white; /* Text color */
-    text-align: center; /* Center the text */
-    line-height: 1.2; /* Adjust line height if needed */
-    padding: 0 2vw; /* Optional padding */
-    margin: 0; /* Remove any default margin */
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
+.side-text-large {
+    position: absolute;
+    top: 65vh;
+    left: 2vw;
+    font-size: 10vw; /* Increased from 3vw to 10vw */
+    transform: translateY(-50%);
+    color: white;
+    padding: 0 2vw;
+    font-family: 'Coolvetica V2';
+    line-height: 0.9;
 }
+
 
 .pink-bar {
     position: fixed; /* Sticks to the bottom of the viewport */
