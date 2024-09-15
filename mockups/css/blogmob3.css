@@ -4,12 +4,11 @@ body, html {
     width: 100vw;
     height: 100vh;
     background-image: url('../assets/bandbpage\(phone\)/background');
-    background-size: auto; /* Allows the image to maintain its original size */
-    background-repeat: repeat; /* Repeats the background both horizontally and vertically */
-    background-position: center top; /* Aligns the background to the top center */
+    background-size: auto; 
+    background-repeat: repeat; 
+    background-position: center top; 
     background-color: #008DD2;
-    overflow-x: hidden; 
-    overflow-y:hidden;
+    overflow:hidden;
 }
 
 @font-face {
@@ -74,9 +73,9 @@ button.back-button {
 /* Menu Bar */
 .menu {
     position: absolute;
-    top: 5vh; /* Align with downtou logo and back button */
+    top: 8vh; /* Align with downtou logo and back button */
     right: 2vw; /* Align with back button */
-    width: 20vw; /* Adjust width if needed */
+    width: 25vw; /* Adjust width if needed */
     z-index: 100; /* Ensure it's on top of other elements */
     background-color: #EF7F1A; /* Solid background color */
     padding: 1vw; /* Adjust padding */
@@ -140,8 +139,8 @@ button.back-button {
 
 hr {
     border: none;
-    border-top: 0.2vw solid white;
-    width: 25vw;
+    border-top: 1vw solid white;
+    width: 90vw;
     margin: 20px 0;
     margin-top: 0;
 }
@@ -149,8 +148,8 @@ hr {
 /* Side Text Small */
 .side-text-small {
     position: absolute;
-    font-size: 8vw; /* Increased from 2vw to 8vw */
-    top: 45vh;
+    font-size: 10vw; 
+    top:40vh;
     left: 2vw;
     transform: translateY(-50%);
     color: white;
@@ -161,9 +160,9 @@ hr {
 
 .side-text-large {
     position: absolute;
-    top: 65vh;
+    top: 60vh;
     left: 2vw;
-    font-size: 10vw; /* Increased from 3vw to 10vw */
+    font-size: 13vw; 
     transform: translateY(-50%);
     color: white;
     padding: 0 2vw;

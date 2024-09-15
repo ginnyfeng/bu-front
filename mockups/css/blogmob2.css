@@ -8,8 +8,7 @@ body, html {
     background-repeat: repeat; /* Repeats the background both horizontally and vertically */
     background-position: center top; /* Aligns the background to the top center */
     background-color: #008DD2;
-    overflow-x: hidden; 
-    overflow-y:hidden;
+    overflow:hidden;
 }
 
 @font-face {
@@ -55,7 +54,6 @@ button.back-button {
     color: white;
     font-size: 2vw;
     font-weight: bold;
-    padding: 0 2vw;
     box-sizing: border-box;
     z-index: 1000; /* Ensures it stays above all other elements */
 }
@@ -91,9 +89,9 @@ button.back-button {
 /* Menu Bar */
 .menu {
     position: absolute;
-    top: 5vh; /* Align with downtou logo and back button */
+    top: 8vh; /* Align with downtou logo and back button */
     right: 2vw; /* Align with back button */
-    width: 20vw; /* Adjust width if needed */
+    width: 25vw; /* Adjust width if needed */
     z-index: 100; /* Ensure it's on top of other elements */
     background-color: #EF7F1A; /* Solid background color */
     padding: 1vw; /* Adjust padding */
@@ -132,7 +130,7 @@ button.back-button {
     z-index: 0;
 }
 
-.menu, .blognbeyond, .downtou{
+.menu, .blognbeyond, .downtou, .plus{
     position: absolute;
     transform: translateY(-50%);
     z-index: 1;
@@ -155,71 +153,31 @@ button.back-button {
     height: auto;
 }
 
-
-/* Custom scrollbar for WebKit browsers (Chrome, Safari) */
-.scrollArea::-webkit-scrollbar {
-    width: 20px; /* Total width of the scrollbar track */
+.plus{
+    margin-left:75vw;
+    margin-top:68vh;
+    width: 13%;
+    max-width:100%;
+    height: auto;
 }
 
-.scrollArea::-webkit-scrollbar-track {
-    background: transparent; /* Transparent track background */
-}
-
-.scrollArea::-webkit-scrollbar-thumb {
-    background-color: white; /* White scrollbar handle */
-    border-radius: 50px; /* Rounded edges */
-    border: 4px solid transparent; /* Creates the gap between the scrollbar and the track */
-    background-clip: content-box; /* Ensures the scrollbar handle retains its width */
-    width: 12px; /* Width of the scrollbar handle */
-    height: 40px; /* Fixed height of the scrollbar handle */
-}
-
-/* Add vertical white line behind the scrollbar */
-.scrollArea::before {
-    content: "";
-    position: absolute;
-    margin-left: 98.7%;
-    width: 2px;
-    background: white;
-    z-index: 0; /* Place the line behind the scrollbar */
-}
-
-/* Scrollable area adjustments */
-.scrollArea {
-    position: absolute;
-    margin-bottom: 20vh;
-    bottom: 2%; /* Leave space from the bottom */
-    padding-right: 10px; /* Separate the scrollbar from the content and make space for the line */
-    background: transparent; /* Keep the background transparent */
-    border-radius: 15px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    z-index: 50; /* Ensure it's below the archives-bar */
-    border: none; /* Remove the border outline */
-}
-
-/* Content Blocks */
-.scrollArea .content {
-    padding: 10px;
-    margin-top:40px;
-}
 
 .scrollArea .content .content-block {
-    height: 10vh;
+    overflow:hidden;
+    position: relative;
+    height: 18vh;
     width: 90vw;
     margin-left: 2.5vw;
     margin-right: 2.5vw;
-    background: white; /* White background for content blocks */
-    border: none; /* Remove border if needed */
-    margin: 10px 0;
+    background: white; 
+    border: none; 
+    margin:20px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 1.5rem;
-    box-sizing: border-box;
 }
 
 .bottom {
+   overflow:hidden;
     position: fixed; /* or use 'absolute' if the parent element has 'position: relative;' */
     background-color: #68b436;
     bottom: 0; /* Sticks to the bottom of the viewport */
@@ -244,7 +202,7 @@ button.back-button {
     line-height: 1.2; /* Adjust line height if needed */
     padding: 0 2vw; /* Optional padding */
     margin: 0; /* Remove any default margin */
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
+    box-sizing: border-box; 
 }
 
 .pink-bar {
@@ -255,9 +213,9 @@ button.back-button {
     width: 100vw; /* Full width */
     z-index: 10; /* Higher z-index to take priority over the green bar */
     box-sizing: border-box;
+    padding: 0 2vw;
     font-family: 'Coolvetica V2', sans-serif;
     justify-content: space-between; /* More space between logos */
-    padding: 0 4vw; /* Adjust padding for more spacing */
     color: white;
 }
 

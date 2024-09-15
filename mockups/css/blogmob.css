@@ -124,15 +124,15 @@ body, html {
 .bottom-text {
     z-index: 15;
     font-family: 'Coolvetica V2', sans-serif;
-    font-size: 8vw; /* Maintain a larger font for mobile readability */
+    font-size: 8vw;
+    font-weight:normal;
     color: white;
-    line-height: 1.2;
+    line-height: 1;
     box-sizing: border-box;
-
     position: absolute; /* Allows precise control */
     left: 5vw; /* Shift to the left */
-    bottom: 30%; /* Adjust to move the text up */
-    text-align: center;
+    bottom: 25%; /* Adjust to move the text up */
+    text-align: left;
     width: 80vw; /* Adjust width for fitting in the bar */
 }
 
@@ -147,7 +147,7 @@ body, html {
     box-sizing: border-box;
     font-family: 'Coolvetica V2', sans-serif;
     justify-content: space-between; /* More space between logos */
-    padding: 0 4vw; /* Adjust padding for more spacing */
+    padding: 0 2vw; /* Adjust padding for more spacing */
     color: white;
 }
 
